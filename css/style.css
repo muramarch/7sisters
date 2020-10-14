@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* nav styles */
+
+header {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 700px;
+    max-width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url(../img/background-image.jpg);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li{
+    float: left;
+    padding-right: 15px;
+}
+.menu li a{
+  display: inline-block;
+  padding: 10px 15px;
+  color: rgb(128, 128, 128);
+  text-decoration: none;
+  transition: 0.3s all;
+}
+
+.menu li a:hover{
+    color: white;
+}
+
+.logo-in-menu {
+    display: none;
+}
+
+.menuToggle{  
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    display: none;
+    background-image: url(../img/burger.png);
+    background-size: cover;
+}
+
+
+@media( max-width: 700px){
+
+    header {
+        background-image: url(../img/09458.jpg);
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav > img {
+        display: none;
+    }
+
+    .menuToggle {
+        position: fixed;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .menuToggle:hover {
+        background-image: url(../img/burger-open.png);
+        background-size: cover;
+    }
+
+    .menu{
+        display: none;
+        position: fixed;
+        height: 550px;
+        width: 300px;
+        margin-top: 80px;
+        margin-left: -10px;
+        padding-left: 10px;
+        padding-top: 20px;
+        border-top: 2px solid yellow;
+        background-color: rgba(0, 0, 0, 0.603)
+    }
+    .menu li{
+        float: none;
+        font-size: 20px;
+        font-weight: 900;
+        padding: 10px;
+    }
+
+    .logo-in-menu {
+        display: flex;
+        position: relative;
+            left: 55px;
+    }
+    
+}
